@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { IMenuItem } from '../../interfaces/menu-item';
+import { Store } from "@ngxs/store";
+import { HomeState } from "../../../Features/home/store/home-state";
+import { GoToPage } from "../../../Shared/store/actions/common-actions";
 
 @Component( {
   selector: 'navbar',
@@ -11,7 +14,7 @@ export class NavbarComponent implements OnInit
 
   menuItems: IMenuItem[] = [];
 
-  constructor()
+  constructor( private store: Store )
   {
   }
 
@@ -37,4 +40,9 @@ export class NavbarComponent implements OnInit
     ]
   }
 
+  next()
+  {
+    const nextId = this.store.selectSnapshot( HomeState.nextId );
+    this.store.dispatch( new GoToPage( [ '/property', nextId ] ) )
+  }
 }

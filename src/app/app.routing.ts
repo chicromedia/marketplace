@@ -1,18 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from "./Layout/layout.component";
-import { HomeComponent } from "./Features/home/home.component";
 
 const APP_ROUTES: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    children: [
-      {
-        path: 'p/:id',
-        component: HomeComponent
-      }
-    ]
+    loadChildren: () => import('./Features/home/home.module').then( m => m.HomeModule )
   },
   {
     path: '**',

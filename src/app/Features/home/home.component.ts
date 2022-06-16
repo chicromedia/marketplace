@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Select, Store } from "@ngxs/store";
+import { LoadProperties } from "./store/home-actions";
+import { Observable } from "rxjs";
+import { IProperty } from "../../Shared/interface/property";
+import { HomeState } from "./store/home-state";
 
 @Component( {
   selector: 'home',
@@ -8,12 +13,15 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit
 {
 
-  constructor()
+  @Select( HomeState.inShow ) property$?: Observable<IProperty>;
+
+  constructor( private store: Store )
   {
   }
 
   ngOnInit(): void
   {
+    this.store.dispatch( new LoadProperties() );
   }
 
 }

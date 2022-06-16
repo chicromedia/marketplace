@@ -1,0 +1,79 @@
+<h3 class="details-title">Descripción:</h3>
+
+<div class="details-description">
+  <span [innerHtml]="property.description"></span>
+</div>
+
+<hr>
+
+<div class="details-resume">
+  <h3 class="details-title">Detalles de propiedad:</h3>
+  <ul class="nav nav-fill">
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Tipo de propiedad<br><strong>{{property.features.propertyType}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Cochera <br><strong>{{property.features.garage}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Aire acondicionado<br><strong>{{property.features.airConditioner}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Cuarto de servicio<br><strong>{{property.features.serviceRoom}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Niveles<br><strong>{{property.features.levels}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Habitaciones<br><strong>{{property.features.rooms}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Terraza<br><strong>{{property.features.terrace}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Bodega<br><strong>{{property.features.warehouse}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Tamaño de lote<br><strong>{{property.features.lotSize}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Baños<br><strong>{{property.features.bathrooms}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Jardin<br><strong>{{property.features.garden}}</strong></h5>
+    </li>
+
+    <li class="nav-item">
+      <i class=""></i>
+      <h5>Seguridad<br><strong>{{property.features.security}}</strong></h5>
+    </li>
+  </ul>
+</div>
+
+<hr>
+
+<div class="details-footer">
+  <btn-primary [label]="'Ver siguiente'" (click)="next()"></btn-primary>
+</div>
+
