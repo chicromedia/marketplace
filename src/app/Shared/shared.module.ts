@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { BtnPrimaryComponent } from './components/btn-primary/btn-primary.component';
+import { ButtonPrimaryComponent } from './components/btn-primary/button-primary.component';
+import { RouterModule } from "@angular/router";
 
 
 @NgModule( {
-  declarations: [
-    BtnPrimaryComponent
-  ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
+  ],
+  declarations: [
+    ButtonPrimaryComponent
+  ],
+  exports: [
+    RouterModule,
+    ButtonPrimaryComponent
   ]
 } )
 export class SharedModule

@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { IMenuItem } from '../../interfaces/menu-item';
 
 @Component( {
-  selector: 'app-navbar',
+  selector: 'navbar',
   templateUrl: './navbar.component.html',
   styleUrls: [ './navbar.component.scss' ]
 } )
 export class NavbarComponent implements OnInit
 {
+
+  menuItems: IMenuItem[] = [];
 
   constructor()
   {
@@ -14,6 +17,24 @@ export class NavbarComponent implements OnInit
 
   ngOnInit(): void
   {
+    this.menuItems = [
+      {
+        label: 'En venta',
+        path: '#'
+      },
+      {
+        label: 'En alquiler',
+        path: '#'
+      },
+      {
+        label: 'Hipoteca',
+        path: '#'
+      },
+      {
+        label: 'Necesito ayuda',
+        path: '#'
+      }
+    ]
   }
 
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BtnPrimaryComponent } from './btn-primary.component';
+import { ButtonPrimaryComponent } from './button-primary.component';
 
 describe('BtnPrimaryComponent', () => {
-  let component: BtnPrimaryComponent;
-  let fixture: ComponentFixture<BtnPrimaryComponent>;
+  let component: ButtonPrimaryComponent;
+  let fixture: ComponentFixture<ButtonPrimaryComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BtnPrimaryComponent ]
+      declarations: [ ButtonPrimaryComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BtnPrimaryComponent);
+    fixture = TestBed.createComponent(ButtonPrimaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
