@@ -1,7 +1,7 @@
 <ng-container *ngIf="property$ | async as property">
   <nav-taps>
     <ng-template navTapItem="Photo">
-      <carrousel [images]="property._id | imagesAsync"></carrousel>
+      <carousel [images]="property._id | imagesAsync"></carousel>
     </ng-template>
 
     <ng-template navTapItem="Mapa">

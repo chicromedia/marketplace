@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonPrimaryComponent } from './components/btn-primary/button-primary.component';
 import { RouterModule } from "@angular/router";
-import { CarrouselComponent } from './components/carrousel/carrousel.component';
+import { CarouselComponent } from './components/carrousel/carousel.component';
 import { ImagesAsyncPipe } from './pipes/imagesAsync.pipe';
 import { YesOrNoPipe } from './pipes/yes-or-no.pipe';
 import { NavTapsComponent } from './components/nav-taps/nav-taps.component';
@@ -19,7 +19,7 @@ import { AgmCoreModule } from "@agm/core";
   ],
   declarations: [
     ButtonPrimaryComponent,
-    CarrouselComponent,
+    CarouselComponent,
     ImagesAsyncPipe,
     YesOrNoPipe,
     NavTapsComponent,
@@ -29,7 +29,7 @@ import { AgmCoreModule } from "@agm/core";
     exports: [
         RouterModule,
         ButtonPrimaryComponent,
-        CarrouselComponent,
+        CarouselComponent,
         ImagesAsyncPipe,
         YesOrNoPipe,
         NavTapsComponent,

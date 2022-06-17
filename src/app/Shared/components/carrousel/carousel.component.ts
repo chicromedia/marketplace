@@ -2,11 +2,11 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Image } from "../../interface/image";
 
 @Component( {
-  selector: 'carrousel',
-  templateUrl: './carrousel.component.html',
-  styleUrls: [ './carrousel.component.scss' ]
+  selector: 'carousel',
+  templateUrl: './carousel.component.html',
+  styleUrls: [ './carousel.component.scss' ]
 } )
-export class CarrouselComponent implements OnInit
+export class CarouselComponent implements OnInit
 {
 
   @Input()
@@ -24,7 +24,7 @@ export class CarrouselComponent implements OnInit
 
   prev()
   {
-    if ( this.selected > this.images.length + 1 )
+    if ( this.selected !== 0 )
     {
       this.selected--;
     }
