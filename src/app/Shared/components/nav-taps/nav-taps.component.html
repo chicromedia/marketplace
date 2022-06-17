@@ -1,0 +1,11 @@
+<ul class="nav nav-fill">
+  <li *ngFor="let item of items" class="nav-item" [ngClass]="{'active': item === selected}">
+    <button class="btn" (click)="selected = item">{{item.label}}</button>
+  </li>
+</ul>
+
+<div class="content">
+  <ng-container *ngIf="selected">
+    <ng-template [ngTemplateOutlet]="selected.ref"></ng-template>
+  </ng-container>
+</div>

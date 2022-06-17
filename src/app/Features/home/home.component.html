@@ -1,5 +1,13 @@
 <ng-container *ngIf="property$ | async as property">
-  <carrousel [images]="property._id | imagesAsync"></carrousel>
+  <nav-taps>
+    <ng-template navTapItem="Photo">
+      <carrousel [images]="property._id | imagesAsync"></carrousel>
+    </ng-template>
+
+    <ng-template navTapItem="Mapa">
+      <google-map [location]="property.location"></google-map>
+    </ng-template>
+  </nav-taps>
 
   <div class="row p-4">
     <div class="col-md-6">
@@ -8,7 +16,7 @@
     </div>
 
     <div class="col-md-3">
-
+      <google-map [location]="property.location" [size]="8" [rounded]="true"></google-map>
     </div>
 
     <div class="col-md-3 d-flex">

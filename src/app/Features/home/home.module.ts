@@ -7,6 +7,7 @@ import { NgxsModule } from "@ngxs/store";
 import { HomeState } from "./store/home-state";
 import { PropertyDetailsComponent } from './components/property-details/property-details.component';
 import { GotoPropertyGuard } from "./guards/goto-property.guard";
+import { AgmCoreModule } from "@agm/core";
 
 
 const HOME_ROUTES: Routes = [
@@ -26,7 +27,8 @@ const HOME_ROUTES: Routes = [
     CommonModule,
     RouterModule.forChild( HOME_ROUTES ),
     NgxsModule.forFeature( [ HomeState ] ),
-    SharedModule
+    SharedModule,
+    AgmCoreModule
   ],
   declarations: [
     HomeComponent,

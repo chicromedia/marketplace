@@ -1,0 +1,33 @@
+@import "src/styles/common/variables";
+
+:host {
+  display: block;
+  background-color: #fff;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+}
+
+.nav {
+  height: 4.5rem;
+
+  &-item {
+    .btn {
+      padding: 0 2rem;
+      font-weight: 500;
+      border-bottom: .3rem solid transparent;
+      border-radius: unset;
+      height: 100%;
+
+      &:focus {
+        box-shadow: unset;
+      }
+    }
+
+    &.active {
+      .btn {
+        color: $primary;
+        border-bottom-color: $primary;
+      }
+    }
+  }
+}

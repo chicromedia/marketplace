@@ -8,6 +8,7 @@ import { CommonState } from "./Shared/store/states/common-state";
 import { HttpClientModule } from "@angular/common/http";
 import { NgxsReduxDevtoolsPluginModule } from "@ngxs/devtools-plugin";
 import { environment } from "../environments/environment";
+import { AgmCoreModule } from "@agm/core";
 
 @NgModule( {
   imports: [
@@ -18,6 +19,9 @@ import { environment } from "../environments/environment";
       CommonState
     ] ),
     NgxsReduxDevtoolsPluginModule.forRoot( { name: 'MarketPlace', disabled: environment.production } ),
+    AgmCoreModule.forRoot( {
+      apiKey: 'AIzaSyCTuazTT4ftRrTOscHQYPabgJPLiBS9YXc'
+    } ),
     LayoutModule
   ],
   declarations: [

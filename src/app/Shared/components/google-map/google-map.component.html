@@ -1,0 +1,11 @@
+<agm-map [latitude]="latitude"
+         [longitude]="longitude"
+         [style.height.rem]="size"
+         [zoom]="zoom"
+         [mapTypeId]="type"
+         [class.rounded-map]="rounded"
+         [fitBounds]="true">
+  <ng-container *ngIf="location">
+    <agm-marker [latitude]="location.latitude" [longitude]="location.longitude" [agmFitBounds]="true"></agm-marker>
+  </ng-container>
+</agm-map>
