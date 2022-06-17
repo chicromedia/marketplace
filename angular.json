@@ -30,7 +30,7 @@
             "styles": [
               "src/styles/autoload.scss",
               {
-                "input": "node_modules/bootstrap-icons/font/bootstrap-icons.css"
+                "input": "node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css"
               }
             ],
             "scripts": []

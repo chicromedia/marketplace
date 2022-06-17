@@ -4,6 +4,7 @@ import { ButtonPrimaryComponent } from './components/btn-primary/button-primary.
 import { RouterModule } from "@angular/router";
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 import { ImagesAsyncPipe } from './pipes/imagesAsync.pipe';
+import { YesOrNoPipe } from './pipes/yes-or-no.pipe';
 
 
 @NgModule( {
@@ -14,13 +15,15 @@ import { ImagesAsyncPipe } from './pipes/imagesAsync.pipe';
   declarations: [
     ButtonPrimaryComponent,
     CarrouselComponent,
-    ImagesAsyncPipe
+    ImagesAsyncPipe,
+    YesOrNoPipe
   ],
   exports: [
     RouterModule,
     ButtonPrimaryComponent,
     CarrouselComponent,
-    ImagesAsyncPipe
+    ImagesAsyncPipe,
+    YesOrNoPipe
   ]
 } )
 export class SharedModule

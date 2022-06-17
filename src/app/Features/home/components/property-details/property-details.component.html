@@ -1,4 +1,4 @@
-<h3 class="details-title">Descripción:</h3>
+<h4 class="text-primary mb-4">Descripción:</h4>
 
 <div class="details-description">
   <span [innerHtml]="property.description"></span>
@@ -6,67 +6,96 @@
 
 <hr>
 
-<div class="details-resume">
-  <h3 class="details-title">Detalles de propiedad:</h3>
-  <ul class="nav nav-fill">
+<h4 class="text-primary mb-4">Detalles de propiedad:</h4>
+
+<div class="row mx-0 px-5 details">
+  <ul class="nav col-md-4 flex-column">
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Tipo de propiedad<br><strong>{{property.features.propertyType}}</strong></h5>
+      <i class="las la-building"></i>
+      <h5 class="fw-light">Tipo de propiedad<br>
+        <small class="fw-semibold">{{property.features.propertyType}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Cochera <br><strong>{{property.features.garage}}</strong></h5>
+      <i class="las la-car"></i>
+      <h5 class="fw-light">Cochera <br>
+        <small class="fw-semibold">{{property.features.garage}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Aire acondicionado<br><strong>{{property.features.airConditioner}}</strong></h5>
+      <i class="las la-snowflake"></i>
+      <h5 class="fw-light">Aire acondicionado<br>
+        <small class="fw-semibold">{{property.features.airConditioner|yesOrNo}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Cuarto de servicio<br><strong>{{property.features.serviceRoom}}</strong></h5>
+      <i class="las la-broom"></i>
+      <h5 class="fw-light">Cuarto de servicio<br>
+        <small class="fw-semibold">{{property.features.serviceRoom|yesOrNo}}</small>
+      </h5>
+    </li>
+  </ul>
+
+  <ul class="nav col-md-4 flex-column">
+    <li class="nav-item">
+      <i class="las la-broom"></i>
+      <h5 class="fw-light">Niveles<br>
+        <small class="fw-semibold">{{property.features.levels}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Niveles<br><strong>{{property.features.levels}}</strong></h5>
+      <i class="las la-bed"></i>
+      <h5 class="fw-light">Habitaciones<br>
+        <small class="fw-semibold">{{property.features.rooms}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Habitaciones<br><strong>{{property.features.rooms}}</strong></h5>
+      <i class="las la-umbrella"></i>
+      <h5 class="fw-light">Terraza<br>
+        <small class="fw-semibold">{{property.features.terrace|yesOrNo}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Terraza<br><strong>{{property.features.terrace}}</strong></h5>
+      <i class="las la-boxes"></i>
+      <h5 class="fw-light">Bodega<br>
+        <small class="fw-semibold">{{property.features.warehouse|yesOrNo}}</small>
+      </h5>
+    </li>
+  </ul>
+
+  <ul class="nav col-md-4 flex-column">
+    <li class="nav-item">
+      <i class="las la-ruler-combined"></i>
+      <h5 class="fw-light">Tamaño de lote<br>
+        <small class="fw-semibold">{{property.features.lotSize}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Bodega<br><strong>{{property.features.warehouse}}</strong></h5>
+      <i class="las la-bath"></i>
+      <h5 class="fw-light">Baños<br>
+        <small class="fw-semibold">{{property.features.bathrooms}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Tamaño de lote<br><strong>{{property.features.lotSize}}</strong></h5>
+      <i class="las la-seedling"></i>
+      <h5 class="fw-light">Jardin<br>
+        <small class="fw-semibold">{{property.features.garden|yesOrNo}}</small>
+      </h5>
     </li>
 
     <li class="nav-item">
-      <i class=""></i>
-      <h5>Baños<br><strong>{{property.features.bathrooms}}</strong></h5>
-    </li>
-
-    <li class="nav-item">
-      <i class=""></i>
-      <h5>Jardin<br><strong>{{property.features.garden}}</strong></h5>
-    </li>
-
-    <li class="nav-item">
-      <i class=""></i>
-      <h5>Seguridad<br><strong>{{property.features.security}}</strong></h5>
+      <i class="las la-shield-alt"></i>
+      <h5 class="fw-light">Seguridad<br>
+        <small class="fw-semibold">{{property.features.security|yesOrNo}}</small>
+      </h5>
     </li>
   </ul>
 </div>
